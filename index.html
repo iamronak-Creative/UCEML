@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used CNC Equipment Man LLC | Quality Used Industrial Machinery</title>
+    <meta name="description"
+        content="Quality Used CNC & Machining Equipment - Priced Right, Ready to Ship. US-based dealer specializing in inspected, industrial-grade used machinery for job shops.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --primary-blue: #1A3A6B;
+            --accent-orange: #F5A623;
+            --dark-bg: #1C1C1E;
+            --steel-grey: #6B7280;
+            --light-bg: #F4F4F4;
+            --text-main: #1A1A1A;
+            --white: #FFFFFF;
+            --success-green: #27AE60;
+            --border-light: #E5E7EB;
+
+            /* Typography */
+            --font-headings: 'Krona One', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Spacing & Transitions */
+            --container-max: 1440px;
+            --transition-speed: 0.3s;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .heading-font {
+            font-family: var(--font-headings);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-speed);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.9rem 2rem;
+            /* Slightly larger padding */
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: var(--font-headings);
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            border: none;
+            text-align: center;
+            font-size: 0.95rem;
+            /* ~2pt bigger than before */
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #E08D00 0%, #F5A623 100%);
+            color: var(--white);
+            text-shadow: none;
+            /* REMOVED TEXT SHADOW */
+            box-shadow: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: none;
+            filter: brightness(1.05);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-dark-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--steel-grey);
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 1. STICKY HEADER & NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-size: 0.8rem;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 38px;
+        }
+
+        header.scrolled .top-bar {
+            height: 0;
+            padding: 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .top-bar .center-msg {
+            text-align: left;
+            padding: 0 1rem 0 0;
+        }
+
+        .top-bar .right-links {
+            display: flex;
+            gap: 1.5rem;
+            white-space: nowrap;
+        }
+
+        .top-bar strong {
+            color: var(--accent-orange);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .main-nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-light);
+            height: 90px;
+            display: flex;
+            align-items: center;
+            transition: all var(--transition-speed);
+        }
+
+        header.scrolled .main-nav {
+            height: 70px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .nav-group-left {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .nav-group-right {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .logo-center {
+            width: 240px;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 1001;
+        }
+
+        .logo-img-wrapper {
+            background-color: var(--white);
+            padding: 5px;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            border-radius: 50% 50% 15% 15%;
+            transition: all var(--transition-speed);
+        }
+
+        header.scrolled .logo-img-wrapper {
+            width: 100px;
+            height: 100px;
+            top: 0;
+        }
+
+        .logo-img-wrapper img {
+            max-width: 130%;
+            max-height: 130%;
+            object-fit: contain;
+            transform: scale(1.2);
+        }
+
+        .nav-link {
+            font-family: var(--font-headings);
+            font-size: calc(0.75rem + 1pt);
+            font-weight: 400;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        button.nav-link {
+            font: inherit;
+            font-family: var(--font-headings);
+            font-size: calc(0.75rem + 1pt);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            color: var(--primary-blue);
+        }
+
+        .nav-link--dropdown {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .nav-chevron {
+            width: 10px;
+            height: 10px;
+            flex-shrink: 0;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-top: 1px;
+            opacity: 0.75;
+        }
+
+        .nav-item--dropdown:hover .nav-chevron,
+        .nav-item--dropdown:focus-within .nav-chevron {
+            opacity: 1;
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: calc(100% + 0.55rem);
+            left: 0;
+            min-width: 280px;
+            max-height: min(70vh, 420px);
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            box-shadow: 0 14px 40px rgba(26, 58, 107, 0.12);
+            z-index: 1002;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        }
+
+        .nav-dropdown li {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nav-dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .nav-item--dropdown:hover .nav-dropdown,
+        .nav-item--dropdown:focus-within .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-dropdown a {
+            display: block;
+            padding: 0.65rem 1.15rem;
+            font-family: var(--font-headings);
+            font-size: calc(0.65rem + 1pt);
+            font-weight: 400;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown a:hover {
+            background: #f1f5f9;
+            color: var(--primary-blue);
+        }
+
+        .nav-dropdown a::after {
+            display: none;
+        }
+
+        .nav-item--dropdown .nav-link::after,
+        .nav-item--dropdown button.nav-link::after {
+            left: 0;
+            right: auto;
+            width: 0;
+        }
+
+        .nav-item--dropdown:hover > .nav-link::after,
+        .nav-item--dropdown:hover > button.nav-link::after,
+        .nav-item--dropdown:focus-within > .nav-link::after,
+        .nav-item--dropdown:focus-within > button.nav-link::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            border-left: 1px solid var(--border-light);
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+
+        .nav-icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-blue);
+            padding: 5px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-icon-btn:hover {
+            color: var(--accent-orange);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 130px;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            padding: 2rem;
+            border-bottom: 2px solid var(--primary-blue);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        header.scrolled .mobile-menu {
+            top: 110px;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-menu ul li a {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        .mobile-menu details {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-menu summary {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            cursor: pointer;
+            list-style: none;
+            padding: 0.35rem 0;
+        }
+
+        .mobile-menu summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .mobile-menu .mobile-submenu {
+            margin: 0.5rem 0 0.75rem 0.75rem;
+            padding: 0;
+            list-style: none;
+            border-left: 2px solid var(--border-light);
+            padding-left: 0.85rem;
+        }
+
+        .mobile-menu .mobile-submenu a {
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: block;
+            padding: 0.35rem 0;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(28, 28, 30, 0.6)), url('assets/metal-machine-tools-industry-cnc-turning.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 4rem 0 6rem 0;
+            /* Optimized for first-fold fit */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Industrial Grid Pattern Overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-focal {
+            position: relative;
+            z-index: 2;
+            width: 130%;
+            /* Make it slightly larger to overlap impressively */
+            margin-left: -15%;
+        }
+
+        .hero-image-focal img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-focal:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            /* HIGH CONTRAST FIX */
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-trust {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #d1d5db;
+        }
+
+        .trust-item svg {
+            color: var(--accent-orange);
+            flex-shrink: 0;
+        }
+
+        .hero-image-placeholder {
+            background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #444;
+            text-transform: uppercase;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.05) 0%, transparent 70%);
+        }
+
+        /* 3. BROWSE BY CATEGORY */
+        .categories {
+            background-color: var(--light-bg);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            position: relative;
+            min-height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            /* STRICT LEFT ALIGNMENT */
+            padding: 2.5rem;
+            transition: all var(--transition-speed);
+            cursor: pointer;
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .category-card.wide {
+            grid-column: span 2;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .category-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.6s ease;
+        }
+
+        .category-card:hover .category-bg-img {
+            transform: scale(1.05);
+        }
+
+        .category-bg-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Bottom-weighted gradient for text readability */
+        .category-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            /* LOWER GRADIENT */
+            background: linear-gradient(to top, rgba(26, 58, 107, 1) 0%, rgba(26, 58, 107, 0.2) 70%, transparent 100%);
+            z-index: 2;
+        }
+
+        .category-info {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+
+        .category-info h3 {
+            font-family: var(--font-headings);
+            font-size: 1.6rem;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            color: var(--white);
+            text-transform: uppercase;
+            text-align: left !important;
+            /* STRICT GLOBAL LEFT */
+        }
+
+        .category-card.wide .category-info h3 {
+            font-size: 2.2rem;
+        }
+
+        .category-info .btn-shop {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            padding: 0.8rem 1.25rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-family: var(--font-headings);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        /* Unified Brand Arrow System - Fail-safe SVG-as-Image implementation */
+        .icon-brand-arrow {
+            width: 22px; /* Standardized small scale for high-precision aesthetic */
+            height: auto;
+            transition: transform 0.3s ease;
+            vertical-align: middle;
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* Color States via CSS Filters */
+        .white-arrow {
+            filter: brightness(0) invert(1);
+        }
+
+        .blue-arrow {
+            width: 22px; /* Synced with global for premium hierarchy */
+            /* Forcing to black first, then applying precise #1A3A6B filter (Brand Blue) */
+            filter: brightness(0) saturate(100%) invert(18%) sepia(61%) saturate(2250%) hue-rotate(197deg) brightness(90%) contrast(110%);
+        }
+
+        .btn:hover .icon-brand-arrow, 
+        .btn-shop:hover .icon-brand-arrow,
+        .btn-quote:hover .icon-brand-arrow,
+        .read-more:hover .icon-brand-arrow {
+            transform: translateX(10px);
+        }
+
+        .slider-btn:hover .icon-brand-arrow {
+            filter: brightness(0) invert(1);
+        }
+
+        .icon-brand-arrow.prev {
+            transform: rotate(180deg);
+        }
+        
+        .btn-prev:hover .icon-brand-arrow.prev {
+            transform: rotate(180deg) translateX(10px);
+        }
+
+        /* Footer Socials */
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 320px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .social-icon svg * {
+            fill: none;
+            stroke: currentColor;
+        }
+
+        .category-card:hover .btn-shop {
+            background-color: #f0f0f0;
+            color: var(--primary-blue);
+        }
+
+        /* Machine Focal Adjustment - Removed as requested to simplify/fix broken links */
+        .category-focal-img {
+            display: none;
+        }
+
+
+
+        /* 4. PRODUCT CARDS & SLIDER */
+        .product-slider-container {
+            position: relative;
+            margin-top: 3rem;
+            padding: 0.75rem 0 2.5rem;
+        }
+
+        .product-slider-track {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto; /* Required for JS slide/scroll */
+            overflow-y: visible;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            /* Room below cards: overflow-x:auto often implies overflow-y clipping — shadows need space here */
+            padding: 0 0 2.25rem;
+        }
+
+        .product-slider-track::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+
+        .product-card {
+            flex: 0 0 calc(33.333% - 1.333rem); /* 3 cards visible */
+            min-width: 380px;
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: visible;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            /* Grows flex cross-size so btn shadow isn’t clipped by the horizontal scrollport */
+            margin-bottom: 1rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .product-card-header {
+            display: none; /* Removed in favor of overlays */
+        }
+
+        .stock-badge, .condition-badge {
+            position: absolute;
+            top: 10px; /* Float away from top edge */
+            padding: 0.45rem 1rem; /* Reduced by ~15-20% for a cleaner footprint */
+            font-family: var(--font-headings);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.6rem; /* Keep text as is */
+            letter-spacing: 0.5px;
+            z-index: 10;
+            border-radius: 2px;
+        }
+
+        .stock-badge {
+            left: 0;
+            background-color: var(--success-green);
+            color: white;
+        }
+
+        .badge-call {
+            background-color: #64748b;
+        }
+
+        .condition-badge {
+            right: 0;
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .cond-good {
+            background-color: #3b82f6;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background-color: #f8fafc;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-details {
+            padding: 2rem 2rem 2.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            overflow: visible;
+        }
+
+        .category-tag {
+            font-size: 0.75rem;
+            color: var(--steel-grey);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: -0.5rem;
+        }
+
+        .product-title {
+            font-family: var(--font-headings);
+            font-size: 1.15rem;
+            line-height: 1.3;
+            color: var(--primary-blue);
+            margin: 0;
+            height: 3rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .spec-tag {
+            font-size: 0.75rem;
+            background-color: #f1f5f9;
+            padding: 0.35rem 0.85rem;
+            border-radius: 4px;
+            color: #475569;
+        }
+
+        .btn-quote {
+            width: 100%;
+            background: linear-gradient(135deg, #f5a623 0%, #ff8c00 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            font-family: var(--font-headings);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            margin-top: auto;
+        }
+
+        .btn-quote .icon-arrow {
+            width: 32px;
+        }
+
+        .btn-quote:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+        }
+
+        /* Slider Interactions */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .slider-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 2px solid #e2e8f0;
+            background: var(--white);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            border-color: var(--primary-blue);
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .view-all-link {
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            font-family: var(--font-headings);
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .view-all-link .arrow {
+            font-size: 1.4rem;
+        }
+
+        /* 5. WHY BUY FROM US */
+        .why-us {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .why-us .section-header h2 {
+            color: var(--white);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .trust-card {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            padding: 1.5rem 1.35rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            transition: border-color var(--transition-speed), background var(--transition-speed);
+        }
+
+        .trust-card:hover {
+            border-color: rgba(255, 255, 255, 0.28);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .trust-icon {
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .trust-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: #ffffff;
+            stroke-width: 1.9;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .trust-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-info p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        /* CNC AUTOMATION PROMO */
+        .automation-promo {
+            background: #eceff3;
+            padding: 4.5rem 0;
+        }
+
+        .automation-promo-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .automation-promo-copy {
+            min-width: 0;
+            font-family: var(--font-body);
+        }
+
+        .automation-promo-title {
+            font-family: var(--font-headings);
+            text-transform: none;
+            letter-spacing: -0.5px;
+            font-weight: 400;
+            font-size: calc(clamp(1.1rem, 2.2vw, 1.5rem) + 4pt);
+            color: var(--primary-blue);
+            line-height: 1.35;
+            margin-bottom: 1rem;
+        }
+
+        .automation-promo-lead {
+            font-family: var(--font-body);
+            font-size: 0.98rem;
+            color: var(--text-main);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+
+        .automation-promo-lead strong {
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--dark-bg);
+        }
+
+        .automation-promo-list {
+            margin: 0 0 1.5rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .automation-promo-list li {
+            position: relative;
+            padding-left: 1.1rem;
+            margin-bottom: 0.45rem;
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            color: #374151;
+            line-height: 1.45;
+        }
+
+        .automation-promo-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+        }
+
+        .btn-automation {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.75rem;
+            font-family: var(--font-headings);
+            font-size: 0.8rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--white);
+            background: #c81e1e;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: filter var(--transition-speed), transform var(--transition-speed);
+        }
+
+        .btn-automation:hover {
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+            color: var(--white);
+        }
+
+        .automation-promo-aside {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0;
+        }
+
+        .automation-promo-video-wrap {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+        }
+
+        .automation-promo-video {
+            position: relative;
+            display: block;
+            aspect-ratio: 16 / 10;
+            background: #111;
+        }
+
+        .automation-promo-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .automation-promo-play {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.25);
+            transition: background var(--transition-speed);
+        }
+
+        .automation-promo-video:hover .automation-promo-play {
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .automation-promo-play svg {
+            width: 64px;
+            height: 64px;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+        }
+
+        .automation-promo-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .automation-promo-brand-a {
+            font-family: var(--font-headings);
+            font-weight: 400;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #c81e1e;
+            letter-spacing: -0.5px;
+        }
+
+        .automation-promo-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .automation-promo-brand-text strong {
+            font-family: var(--font-headings);
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--dark-bg);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            border-bottom: 2px solid var(--dark-bg);
+            padding-bottom: 0.15rem;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .automation-promo-brand-sub {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .automation-promo-brand-sub span {
+            color: var(--dark-bg);
+        }
+
+        @media (max-width: 1024px) {
+            .automation-promo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* OEM PARTNERS */
+        .oems-section {
+            background: #f8fafc;
+            padding: 5rem 0;
+        }
+
+        .oems-section .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .oems-section .section-header h2 {
+            font-size: clamp(1.65rem, 3vw, 2.35rem);
+            color: var(--primary-blue);
+            margin-bottom: 0.65rem;
+            text-transform: none;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .oems-section .section-header p {
+            font-size: 1.05rem;
+            line-height: 1.65;
+            max-width: 720px;
+        }
+
+        .oem-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.75rem;
+        }
+
+        .oem-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1.25rem 0.9rem 1rem;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .oem-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(26, 58, 107, 0.2);
+            box-shadow: 0 14px 32px rgba(26, 58, 107, 0.12);
+        }
+
+        .oem-card-logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 58px;
+        }
+
+        .oem-card-logo-img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        /* Optical balance: scale heavy/wide marks down, light marks up */
+        .oem-card-logo-img--accutex {
+            max-height: 34px;
+            max-width: 98%;
+        }
+
+        .oem-card-logo-img--trpec {
+            max-height: 62px;
+        }
+
+        .oem-card-logo-img--enshu {
+            max-height: 55px;
+        }
+
+        .oem-card-logo-img--fanuc {
+            max-height: 24px;
+            max-width: 92%;
+        }
+
+        .oem-card-logo-img--johnford {
+            max-height: 65px;
+            max-width: 98%;
+        }
+
+        .oem-card-logo-img--lico {
+            max-height: 53px;
+        }
+
+        .oem-card-logo-img--mitsubishi {
+            max-height: 34px;
+            max-width: 100%;
+        }
+
+        .oem-card-logo-img--nexturn {
+            max-height: 87px;
+            max-width: 96%;
+        }
+
+        .oem-card-logo-img--ocean {
+            max-height: 73px;
+            max-width: 96%;
+        }
+
+        .oem-card-logo-img--precihole {
+            max-height: 57px;
+        }
+
+        .oem-card-caption {
+            width: 100%;
+            margin: 0;
+            margin-top: auto;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-light);
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            color: var(--steel-grey);
+            line-height: 1.45;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1200px) {
+            .oem-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .oem-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .oem-card {
+                min-height: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .oem-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 6. QUICK INQUIRY STRIP */
+        .inquiry {
+            padding: 8rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('assets/photo-1764114235896-034c8772de01.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .inquiry-header {
+            margin-bottom: 4rem;
+            max-width: 100%;
+        }
+
+        .inquiry-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        .inquiry-header p {
+            color: var(--steel-grey);
+            font-size: 1.25rem;
+            width: 100%;
+        }
+
+        .inquiry-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 5rem;
+            align-items: stretch;
+        }
+
+        .inquiry-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            background: rgb(32 31 31);
+            padding: 3.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .inquiry-form input,
+        .inquiry-form textarea,
+        .inquiry-form button {
+            padding: 1.2rem;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background-color: white;
+            border: 1px solid var(--border-light);
+            color: var(--dark-bg);
+        }
+
+        .inquiry-form textarea {
+            grid-column: span 2;
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .inquiry-form .btn-primary {
+            grid-column: span 2;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            border: none;
+            font-family: 'Krona One', sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: white;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ffc107 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1rem;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .inquiry-form .btn-primary:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .inquiry-img-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .inquiry-img-wrapper img {
+            max-height: 580px; /* Increased by 20% for maximum impact */
+            width: auto;
+            max-width: 100%;
+            display: block;
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
+            transform: none;
+            object-fit: contain;
+        }
+
+        .inquiry-form button {
+            grid-column: span 2;
+        }
+
+        /* 7. TESTIMONIALS SLIDER */
+        .testimonials {
+            background-color: #f8fafc;
+            padding: 8rem 0;
+            overflow: hidden;
+        }
+
+        .testimonial-slider-container {
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .testimonials .section-header {
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-marquee-row {
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .testimonial-track {
+            display: flex;
+            gap: 0.9rem;
+            width: max-content;
+            padding: 2rem 0;
+            animation: testimonial-marquee 42s linear infinite;
+            will-change: transform;
+        }
+
+        .testimonial-marquee-row:hover .testimonial-track {
+            animation-play-state: paused;
+        }
+
+        .testimonial-card {
+            flex: 0 0 367px;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            text-align: left;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 0.66rem;
+            color: #fbbf24; /* Google golden yellow stars */
+            font-size: 0.98rem;
+        }
+
+        .testimonial-title {
+            font-family: 'Krona One', sans-serif;
+            font-size: 0.94rem;
+            font-weight: 800;
+            color: var(--dark-bg);
+            margin-bottom: 0.66rem;
+            line-height: 1.3;
+            display: block;
+        }
+
+        .testimonial-quote {
+            font-size: 0.94rem;
+            line-height: 1.5;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        .testimonial-author-box {
+            display: flex;
+            align-items: center;
+            gap: 0.96rem;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1.08rem;
+        }
+
+        .author-pfp {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #cbd5e1;
+        }
+
+        .author-details h4 {
+            font-size: 0.94rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.1rem;
+        }
+
+        .author-details span {
+            font-size: 0.82rem;
+            color: var(--steel-grey);
+            font-weight: 500;
+        }
+
+        .testimonial-progress {
+            width: 300px;
+            height: 4px;
+            background: #e2e8f0;
+            margin: 4rem auto 0;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .testimonial-progress-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 25%;
+            background: #ef4444; /* Alert red from ref */
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        @keyframes testimonial-marquee {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-50% - 0.45rem));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                flex-basis: 328px;
+            }
+        }
+
+        /* 8. BLOG / INDUSTRY NEWS */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .blog-card {
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .blog-image {
+            background-color: #f1f5f9;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-info {
+            padding: 1.5rem;
+        }
+
+        .blog-tag {
+            color: var(--accent-orange);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            height: 3rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-clamp: 2;
+        }
+
+        .blog-excerpt {
+            font-size: 0.9rem;
+            color: var(--steel-grey);
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* 9. FOOTER */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 5rem 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+            gap: 4rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-orange);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-tagline {
+            color: var(--steel-grey);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background: #2c2c2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links li a {
+            color: var(--steel-grey);
+            font-size: 0.95rem;
+        }
+
+        .footer-links li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            color: var(--steel-grey);
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c2c2e;
+            padding-top: 1.15rem;
+            padding-bottom: 2.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--steel-grey);
+        }
+
+        .footer-legal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .footer-legal a {
+            color: var(--steel-grey);
+            font-size: inherit;
+        }
+
+        .footer-legal a:hover {
+            color: var(--white);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+
+            .hero-grid,
+            .footer-grid,
+            .inquiry-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-grid,
+            .trust-grid,
+            .testimonial-grid,
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Responsive Nav */
+            .nav-group-left,
+            .nav-group-right .nav-link,
+            .nav-group-right .nav-icons>button:not(.mobile-toggle),
+            .nav-group-right .cart-wrapper {
+                display: none;
+            }
+
+            .nav-container {
+                grid-template-columns: 1fr auto 1fr;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-group-right {
+                justify-content: flex-end;
+            }
+
+            .logo-img-wrapper {
+                width: 100px;
+                height: 100px;
+                top: -20px;
+            }
+
+            header.scrolled .logo-img-wrapper {
+                width: 80px;
+                height: 80px;
+                top: -15px;
+            }
+
+            .top-bar .right-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links,
+            .nav-right .phone-num {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-right .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-grid,
+            .trust-grid,
+            .testimonial-grid,
+            .blog-grid,
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .inquiry-form {
+                grid-template-columns: 1fr;
+            }
+
+            .inquiry-form button {
+                grid-column: span 1;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .footer-legal {
+                justify-content: center;
+            }
+        }
+
+        /* ICONS */
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. STICKY HEADER & NAVIGATION -->
+    <header id="main-header">
+        <!-- TOP INFO BAR -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="center-msg">
+                    Enjoy 20+ Years of Industrial Expertise - Personally Inspected Inventory <strong id="cta-msg">JOIN
+                        NOW</strong>
+                </div>
+                <div class="right-links">
+                    <a href="#">Become a Dealer</a>
+                    <span style="opacity: 0.3; margin: 0 10px;">|</span>
+                    <a href="#contact" style="color: var(--accent-orange); font-weight: 700;">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <div class="main-nav">
+            <div class="container nav-container">
+                <!-- Group Left -->
+                <div class="nav-group-left" id="nav-left-links">
+                    <div class="nav-item nav-item--dropdown">
+                        <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false" aria-haspopup="true" id="nav-machines-btn">
+                            Machines
+                            <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5"></path></svg>
+                        </button>
+                        <ul class="nav-dropdown" role="menu" aria-labelledby="nav-machines-btn">
+                            <li role="none"><a href="#featured" role="menuitem">All machines</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">5-Axis CNC machines</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Vertical machining centers</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Horizontal machining centers</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Swiss lathes</a></li>
+                            <li role="none"><a href="#automation" role="menuitem">Automation</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Robotics</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Bridge mills</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Boring mills</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Grinders</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">EDM wire machines</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Used machines</a></li>
+                            <li role="none"><a href="#featured" role="menuitem">Stock machines</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item nav-item--dropdown">
+                        <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false" aria-haspopup="true" id="nav-categories-btn">
+                            Categories
+                            <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5"></path></svg>
+                        </button>
+                        <ul class="nav-dropdown" role="menu" aria-labelledby="nav-categories-btn">
+                            <li role="none"><a href="#categories" role="menuitem">Shop all categories</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">CNC machining centers</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">Precision milling</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">Turning centers</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">Press brakes</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">Drill presses</a></li>
+                            <li role="none"><a href="#categories" role="menuitem">Surface grinders</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#featured" class="nav-link">Fresh Arrivals</a>
+                    </div>
+                </div>
+
+                <!-- Centered Logo -->
+                <div class="logo-center">
+                    <a href="#" class="logo-img-wrapper">
+                        <img src="assets/Updated Logo 2.png" alt="Used CNC Equipment Man LLC Logo" id="main-logo-src">
+                    </a>
+                </div>
+
+                <!-- Group Right -->
+                <div class="nav-group-right">
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#blog" class="nav-link">News</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+
+                    <!-- Icons -->
+                    <div class="nav-icons">
+                        <button class="nav-icon-btn" title="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                        <button class="nav-icon-btn" title="Account">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+                        <div class="cart-wrapper nav-icon-btn" title="View Cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-badge">0</span>
+                        </div>
+                        <button class="mobile-toggle" id="menu-toggle">☰</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li>
+                    <details>
+                        <summary>Machines</summary>
+                        <ul class="mobile-submenu">
+                            <li><a href="#featured">All machines</a></li>
+                            <li><a href="#featured">5-Axis CNC machines</a></li>
+                            <li><a href="#featured">Vertical machining centers</a></li>
+                            <li><a href="#featured">Horizontal machining centers</a></li>
+                            <li><a href="#featured">Swiss lathes</a></li>
+                            <li><a href="#automation">Automation</a></li>
+                            <li><a href="#featured">Robotics</a></li>
+                            <li><a href="#featured">Bridge mills</a></li>
+                            <li><a href="#featured">Boring mills</a></li>
+                            <li><a href="#featured">Grinders</a></li>
+                            <li><a href="#featured">EDM wire machines</a></li>
+                            <li><a href="#featured">Used machines</a></li>
+                            <li><a href="#featured">Stock machines</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Categories</summary>
+                        <ul class="mobile-submenu">
+                            <li><a href="#categories">Shop all categories</a></li>
+                            <li><a href="#categories">CNC machining centers</a></li>
+                            <li><a href="#categories">Precision milling</a></li>
+                            <li><a href="#categories">Turning centers</a></li>
+                            <li><a href="#categories">Press brakes</a></li>
+                            <li><a href="#categories">Drill presses</a></li>
+                            <li><a href="#categories">Surface grinders</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="#featured">Fresh Arrivals</a></li>
+                <li><a href="#blog">News</a></li>
+                <li><a href="#contact" class="btn btn-primary"
+                        style="display: block; text-align: center; color: white;">Request a Quote</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 2. HERO BANNER -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Trusted Used <br> CNC Equipment. <br> Fair Prices. <br> Fast Shipping.</h1>
+                <p>We source, inspect, and deliver industrial-grade used machinery to job shops and manufacturers across
+                    the USA. No middlemen. No guesswork.</p>
+                <div class="hero-ctas">
+                    <a href="#featured" class="btn btn-primary">Browse All Machines <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></a>
+                    <a href="#contact" class="btn btn-outline">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        US-Based Dealer
+                    </div>
+                    <div class="trust-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                        Personally Inspected
+                    </div>
+                    <div class="trust-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                            <path d="M15 2l2 2"></path>
+                            <path d="M7 2L5 4"></path>
+                        </svg>
+                        Fast Quote Response
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-focal">
+                <img src="assets/hero-machine.webp" alt="Featured Precision CNC Machine">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BROWSE BY CATEGORY -->
+    <section id="categories" class="categories">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Shop by Machine Type</h2>
+                <p>From CNC machining centers to surface grinders — find exactly what your shop needs.</p>
+            </div>
+            <div class="category-grid">
+                <!-- ROW 1 -->
+                <!-- 1. Wide Banner -->
+                <div class="category-card wide">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1740209475472-aa7d280f7452?q=80&w=2000&auto=format&fit=crop"
+                            alt="CNC Machining Center">
+                    </div>
+                    <div class="category-focal-img">
+                        <img src="assets/cnc_machining_center_category_1775110459834.png" alt="VMC Center">
+                    </div>
+                    <div class="category-info">
+                        <h3>CNC Machining Centers</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 2. Tall Card -->
+                <div class="category-card">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1666618090858-fbcee636bd3e?q=80&w=2000&auto=format&fit=crop"
+                            alt="Precision Milling Machine">
+                    </div>
+                    <div class="category-focal-img">
+                        <img src="assets/milling_machine_category_1775110495251.png" alt="Mill Detail">
+                    </div>
+                    <div class="category-info">
+                        <h3>Precision Milling</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 3. Tall Card -->
+                <div class="category-card">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1689942007817-679c21614b25?q=80&w=2000&auto=format&fit=crop"
+                            alt="CNC Turning Center">
+                    </div>
+                    <div class="category-focal-img">
+                        <img src="assets/cnc_lathe_category_1775110477401.png" alt="Lathe Detail">
+                    </div>
+                    <div class="category-info">
+                        <h3>Turning Centers</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <!-- 4. Tall Card -->
+                <div class="category-card">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1738162837340-da3e7a323a09?q=80&w=2000&auto=format&fit=crop"
+                            alt="Heavy Press Brake">
+                    </div>
+                    <div class="category-info">
+                        <h3>Press Brakes</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 5. Tall Card -->
+                <div class="category-card">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1603138519910-9a3813cc0ca6?q=80&w=2000&auto=format&fit=crop"
+                            alt="Industrial Drill Press">
+                    </div>
+                    <div class="category-info">
+                        <h3>Drill Presses</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 6. Wide Banner (Reversed) -->
+                <div class="category-card wide">
+                    <div class="category-bg-img">
+                        <img src="https://images.unsplash.com/photo-1771591201020-5cd2ba14e731?q=80&w=2000&auto=format&fit=crop"
+                            alt="Industrial Surface Grinder">
+                    </div>
+                    <div class="category-info">
+                        <h3>Surface Grinders</h3>
+                        <a href="#featured" class="btn-shop">Shop Category <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURED MACHINES -->
+    <section id="featured">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Recently Added Equipment</h2>
+                <p>Fresh inventory — updated regularly. Act fast, good machines move quickly.</p>
+            </div>
+            <div class="product-slider-container">
+                <div class="product-slider-track" id="product-track">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="stock-badge">In Stock</span>
+                            <span class="condition-badge cond-good">Good</span>
+                            <img src="assets/what-is-cnc-machining.png" alt="Haas VF-2 CNC Vertical Machining Center">
+                        </div>
+                        <div class="product-details">
+                            <span class="category-tag">CNC Machining Centers</span>
+                            <h3 class="product-title">Haas VF-2 CNC Vertical Machining Center</h3>
+                            <div class="specs">
+                                <span class="spec-tag">Year: 2014</span>
+                                <span class="spec-tag">Condition: Fully Operational</span>
+                            </div>
+                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="stock-badge">In Stock</span>
+                            <span class="condition-badge">Excellent</span>
+                            <img src="assets/3-Axis-CNC-machining3.jpg" alt="Bridgeport Series I Knee Mill">
+                        </div>
+                        <div class="product-details">
+                            <span class="category-tag">Milling Machines</span>
+                            <h3 class="product-title">Bridgeport Series I Knee Mill</h3>
+                            <div class="specs">
+                                <span class="spec-tag">Year: 2008</span>
+                                <span class="spec-tag">Recently Serviced</span>
+                            </div>
+                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="stock-badge badge-call">Call for Availability</span>
+                            <span class="condition-badge cond-good">Good</span>
+                            <img src="assets/cnc-machining.jpg" alt="Cincinnati #2 Surface Grinder">
+                        </div>
+                        <div class="product-details">
+                            <span class="category-tag">Grinding Machines</span>
+                            <h3 class="product-title">Cincinnati #2 Surface Grinder</h3>
+                            <div class="specs">
+                                <span class="spec-tag">Year: 2005</span>
+                                <span class="spec-tag">Tested & Running</span>
+                            </div>
+                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="stock-badge">In Stock</span>
+                            <span class="condition-badge">Excellent</span>
+                            <img src="assets/metal-machine-tools-industry-cnc-turning.jpeg" alt="South Bend CNC Lathe">
+                        </div>
+                        <div class="product-details">
+                            <span class="category-tag">Turning Centers</span>
+                            <h3 class="product-title">South Bend 15" CNC Precision Lathe</h3>
+                            <div class="specs">
+                                <span class="spec-tag">Year: 2018</span>
+                                <span class="spec-tag">Low Hours</span>
+                            </div>
+                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="slideProducts('prev')" aria-label="Previous machines"><img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow prev" alt=""></button>
+                    <button class="slider-btn btn-next" onclick="slideProducts('next')" aria-label="Next machines"><img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></button>
+                </div>
+            </div>
+
+            <!-- Explorer link removed as requested -->
+        </div>
+    </section>
+
+    <!-- CNC AUTOMATION PROMO -->
+    <section class="automation-promo" id="automation">
+        <div class="container">
+            <div class="automation-promo-grid">
+                <div class="automation-promo-copy">
+                    <h2 class="automation-promo-title">CNC Automation Solutions from our A+ Automation Team</h2>
+                    <p class="automation-promo-lead">The OB7 is a true independent <strong>7-axis collaborative robot</strong> that uses a “self-teaching” platform.</p>
+                    <ul class="automation-promo-list">
+                        <li>Fill Employment &amp; Skills Gaps</li>
+                        <li>Machine Tending 24/7</li>
+                        <li>Simplify Your Workflow</li>
+                        <li>Overcome Business Interruptions</li>
+                        <li>Easy First-Step to Modernization</li>
+                        <li>Save Money &amp; Increase Your Bottom Line</li>
+                    </ul>
+                    <a href="#" class="btn-automation">View More</a>
+                </div>
+                <div class="automation-promo-aside">
+                    <div class="automation-promo-video-wrap">
+                        <a href="https://www.youtube.com/results?search_query=OB7+collaborative+robot" class="automation-promo-video" target="_blank" rel="noopener noreferrer" aria-label="Watch automation team video on YouTube">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9dd7d?q=80&w=900&auto=format&fit=crop" alt="Machine shop video thumbnail">
+                            <span class="automation-promo-play" aria-hidden="true">
+                                <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path fill="#f00" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path fill="#fff" d="M45 24 27 14v20"/></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="automation-promo-brand">
+                        <span class="automation-promo-brand-a">A+</span>
+                        <div class="automation-promo-brand-text">
+                            <strong>Automation</strong>
+                            <span class="automation-promo-brand-sub"><span>by </span>Absolute Machine Tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY BUY FROM US (TRUST STRIP) -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Why Industrial Buyers Choose Used CNC Equipment Man</h2>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V9l6 4V9l6 4V5"></path>
+                            <path d="M9 21v-4"></path>
+                            <path d="M14 21v-3"></path>
+                            <path d="M19 21V9"></path>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>20+ Years in the Industry</h3>
+                        <p>Deep knowledge across all major CNC brands.</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="M3 10h18M3 14h18"></path>
+                            <path d="M3 5l8 9"></path>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>100% US-Based Operation</h3>
+                        <p>No overseas sourcing surprises.</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="6"></circle>
+                            <path d="M20 20l-4.2-4.2"></path>
+                            <path d="M11 8v6M8 11h6"></path>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>Personally Inspected Equipment</h3>
+                        <p>Honest condition reports, always.</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 2L4 14h6l-1 8 9-12h-6z"></path>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>Fast Quote Turnaround</h3>
+                        <p>Hear back within 1 business day.</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M1 7h13v9H1z"></path>
+                            <path d="M14 10h4l3 3v3h-7z"></path>
+                            <circle cx="6" cy="18" r="2"></circle>
+                            <circle cx="18" cy="18" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>Nationwide Shipping Available</h3>
+                        <p>We coordinate freight and rigging.</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 12l3-3a2 2 0 0 1 3 0l2 2"></path>
+                            <path d="M3 10l4 4 3-3"></path>
+                            <path d="M21 10l-4 4-3-3"></path>
+                            <path d="M10 14l2 2 2-2"></path>
+                        </svg>
+                    </div>
+                    <div class="trust-info">
+                        <h3>No-Pressure Sales</h3>
+                        <p>Here to help you find the right machine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OEM PARTNERS -->
+    <section class="oems-section" id="oems">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Our OEM partners</h2>
+                <p>These are the manufacturers and brands we stand behind—trusted names in CNC, automation, and metalworking. When you work with us, you get serious equipment backed by factory relationships and real application support.</p>
+            </div>
+            <div class="oem-grid">
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/accutex.png" alt="AccuteX" class="oem-card-logo-img oem-card-logo-img--accutex" width="200" height="40" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Wired EDMs &amp; Die Sinkers</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/trpec.svg" alt="TRPEC" class="oem-card-logo-img oem-card-logo-img--trpec" width="180" height="32" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">5-Axis Machining Centers</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/enshu.svg" alt="Enshu" class="oem-card-logo-img oem-card-logo-img--enshu" width="180" height="32" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Horizontal CNC Machining</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/fanuc.svg" alt="FANUC" class="oem-card-logo-img oem-card-logo-img--fanuc" width="160" height="28" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Certified Robotic Automation Integrator</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/johnford.png" alt="Johnford" class="oem-card-logo-img oem-card-logo-img--johnford" width="180" height="48" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Bridge Mills, Boring Mills, &amp; Large Lathes</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/lico.svg" alt="LICO" class="oem-card-logo-img oem-card-logo-img--lico" width="160" height="32" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Multi-Slide CNC Screw Machines</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/mitsubishi-electric.svg" alt="Mitsubishi Electric" class="oem-card-logo-img oem-card-logo-img--mitsubishi" width="200" height="48" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Automation and Robotics</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/nexturn.svg" alt="Nexturn" class="oem-card-logo-img oem-card-logo-img--nexturn" width="200" height="36" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Swiss CNC Lathes</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/ocean.svg" alt="Ocean Technologies" class="oem-card-logo-img oem-card-logo-img--ocean" width="220" height="36" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Small Hole Drilling Equipment</p>
+                </div>
+                <div class="oem-card">
+                    <div class="oem-card-logo">
+                        <img src="assets/oem/precihole.svg" alt="Precihole" class="oem-card-logo-img oem-card-logo-img--precihole" width="180" height="32" loading="lazy">
+                    </div>
+                    <p class="oem-card-caption">Horizontals &amp; High Automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. QUICK INQUIRY STRIP -->
+    <section class="inquiry">
+        <div class="container">
+            <div class="inquiry-header">
+                <h2>Have a Machine in Mind?</h2>
+                <p>Tell us what you're looking for and we'll find it — or check our current inventory for a match.</p>
+            </div>
+            
+            <div class="inquiry-grid">
+                <div class="inquiry-form-col">
+                    <form class="inquiry-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" placeholder="Company Name" required>
+                        <input type="email" placeholder="Business Email" required>
+                        <input type="tel" placeholder="Phone Number">
+                        <input type="text" placeholder="Specific Machine You're Looking For" style="grid-column: span 2;" required>
+                        <textarea placeholder="Message / Additional Requirements"></textarea>
+                        <button type="submit" class="btn btn-primary">Get a Free Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white-arrow" alt=""></button>
+                    </form>
+                </div>
+                
+                <div class="inquiry-img-wrapper">
+                    <img src="assets/machine-v.png" alt="Vertical CNC Industrial Machine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Real Success in Real Shops</h2>
+                <p>Industrial performance verified by owners and operators nationwide.</p>
+            </div>
+            
+            <div class="testimonial-slider-container">
+                <div class="testimonial-marquee-row">
+                    <div class="testimonial-track" data-testimonial-track>
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <span class="testimonial-title">"So Far So Good"</span>
+                        <span class="testimonial-quote">"I just went on here and see the product that I wanted and I bought it so far so good. The Haas arrived exactly as described."</span>
+                        <div class="testimonial-author-box">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Ronald M">
+                            <div class="author-details">
+                                <h4>Ronald M</h4>
+                                <span>Ohio, US</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <span class="testimonial-title">"Great Price"</span>
+                        <span class="testimonial-quote">"Great price, I know it is used, but look at what a new one cost!! THANK YOU Used CNC Man. Saved us nearly $45k on our VMC."</span>
+                        <div class="testimonial-author-box">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Graham">
+                            <div class="author-details">
+                                <h4>Graham Griffiths</h4>
+                                <span>Tennessee, US</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <span class="testimonial-title">"Good Reputation"</span>
+                        <span class="testimonial-quote">"Honestly this was the cheapest place I could find the machine I needed. Checkout was easy and the reputation is solid."</span>
+                        <div class="testimonial-author-box">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Ashton">
+                            <div class="author-details">
+                                <h4>Ashton A</h4>
+                                <span>California, US</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <span class="testimonial-title">"Fast Ship"</span>
+                        <span class="testimonial-quote">"Have done business with John before! Always a pleasure, fast ship and great deals on rigging for the press brakes."</span>
+                        <div class="testimonial-author-box">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Eli C">
+                            <div class="author-details">
+                                <h4>Eli C</h4>
+                                <span>Michigan, US</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <span class="testimonial-title">"Best Condition"</span>
+                        <span class="testimonial-quote">"My milling center got here super fast and in the best condition possible for a used like new machine. Highly recommend."</span>
+                        <div class="testimonial-author-box">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Patrick J">
+                            <div class="author-details">
+                                <h4>Patrick J</h4>
+                                <span>Tennessee, US</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BLOG / INDUSTRY NEWS -->
+    <section>
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>From the Shop Floor</h2>
+                <p>Tips, buying guides, and industry news for CNC professionals.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/3-Axis-CNC-machining3.jpg" alt="VMC Buying Guide">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Buying Guide</span>
+                        <h3 class="blog-title">5 Things to Check Before Buying a Used CNC Machine</h3>
+                        <p class="blog-excerpt">Ensure you're making a smart investment with our comprehensive
+                            pre-purchase inspection checklist...</p>
+                        <a href="#" class="read-more" style="color: var(--primary-blue); display: inline-flex; align-items: center; gap: 0.8rem; font-weight: 700;">Read More <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/5-axis-machining.jpg" alt="Machine Comparison">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Equipment Comparison</span>
+                        <h3 class="blog-title">Haas vs. Mazak: Which Used VMC Is Right for Your Shop?</h3>
+                        <p class="blog-excerpt">Comparing reliability, parts availability, and resale value between two
+                            industry titans...</p>
+                        <a href="#" class="read-more" style="color: var(--primary-blue); display: inline-flex; align-items: center; gap: 0.8rem; font-weight: 700;">Read More <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/cnc-machining.jpg" alt="Cost Analysis">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Industry News</span>
+                        <h3 class="blog-title">How to Calculate the True Cost of Used Machinery</h3>
+                        <p class="blog-excerpt">Don't forget the extras! We break down freight, rigging, and
+                            installation costs for your budget...</p>
+                        <a href="#" class="read-more" style="color: var(--primary-blue); display: inline-flex; align-items: center; gap: 0.8rem; font-weight: 700;">Read More <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="assets/Updated Logo 2.png" alt="Used CNC Equipment Man"
+                        style="max-width: 150px; margin-bottom: 1rem;">
+                </a>
+                <p class="footer-tagline">Your trusted source for quality used CNC and machining equipment.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Machines</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Machine Types</h4>
+                <ul class="footer-links">
+                    <li><a href="#">CNC Machining Centers</a></li>
+                    <li><a href="#">Milling Machines</a></li>
+                    <li><a href="#">Lathes</a></li>
+                    <li><a href="#">Grinding Machines</a></li>
+                    <li><a href="#">Drilling Machines</a></li>
+                    <li><a href="#">Press Brakes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li>📞 (555) 000-0000</li>
+                    <li>✉️ info@usedcncequipmentman.com</li>
+                    <li>📍 United States</li>
+                    <li>Mon–Fri: 8:00 AM – 5:00 PM EST</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Used CNC Equipment Man LLC. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="https://www.commercepundit.com" target="_blank" rel="noopener noreferrer">Design and Developed by CommercePundit</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Product Slider Logic
+        function slideProducts(direction) {
+            const track = document.getElementById('product-track');
+            if (!track) return;
+            
+            const cardWidth = track.firstElementChild.offsetWidth + 32; // width + gap
+            const scrollAmount = direction === 'next' ? cardWidth : -cardWidth;
+            
+            track.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth Scrolling for Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuToggle.textContent = '☰';
+                    }
+                }
+            });
+        });
+
+        // Duplicate testimonial cards inside each track for seamless loop.
+        document.querySelectorAll('[data-testimonial-track]').forEach((track) => {
+            track.innerHTML += track.innerHTML;
+        });
+    </script>
+</body>
+
+</html>
