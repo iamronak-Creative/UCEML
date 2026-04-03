@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Used CNC Equipment Man LLC | Quality Used Industrial Machinery</title>
     <meta name="description"
         content="Quality Used CNC & Machining Equipment - Priced Right, Ready to Ship. US-based dealer specializing in inspected, industrial-grade used machinery for job shops.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://www.youtube.com">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
@@ -114,6 +117,10 @@
             filter: brightness(1.05);
         }
 
+        .btn-primary:hover .icon-brand-arrow {
+            filter: brightness(0) saturate(100%) invert(18%) sepia(61%) saturate(2250%) hue-rotate(197deg) brightness(90%) contrast(110%);
+        }
+
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--white);
@@ -175,14 +182,18 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: all 0.3s ease;
+            transition: padding var(--transition-speed), min-height var(--transition-speed), opacity var(--transition-speed);
             overflow: hidden;
-            height: 38px;
+            min-height: 38px;
         }
 
         header.scrolled .top-bar {
+            min-height: 0;
             height: 0;
-            padding: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            pointer-events: none;
         }
 
         .top-bar .container {
@@ -199,8 +210,48 @@
 
         .top-bar .right-links {
             display: flex;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .top-bar-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(255, 255, 255, 0.92);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0.02em;
             white-space: nowrap;
+        }
+
+        .top-bar-contact-link:hover {
+            color: var(--white);
+        }
+
+        .top-bar-contact-icon {
+            flex-shrink: 0;
+            opacity: 0.9;
+        }
+
+        .top-bar-sep {
+            opacity: 0.3;
+            margin: 0 0.15rem;
+            user-select: none;
+        }
+
+        .top-bar-cta {
+            color: var(--accent-orange);
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .top-bar-cta:hover {
+            color: var(--white);
         }
 
         .top-bar strong {
@@ -442,6 +493,139 @@
 
         .nav-icon-btn:hover {
             color: var(--accent-orange);
+        }
+
+        body.search-modal-open {
+            overflow: hidden;
+        }
+
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2500;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: max(5rem, 11vh) 1.25rem 2rem;
+            background: rgba(15, 23, 42, 0.58);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .search-overlay.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-overlay-inner {
+            width: 100%;
+            max-width: 600px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-light);
+            padding: 1.35rem 1.4rem 1.25rem;
+            transform: translateY(-14px);
+            transition: transform 0.25s ease;
+        }
+
+        .search-overlay.is-open .search-overlay-inner {
+            transform: translateY(0);
+        }
+
+        .search-overlay-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-overlay-title {
+            font-family: var(--font-headings);
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 0;
+        }
+
+        .search-overlay-close {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 6px;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: background var(--transition-speed), color var(--transition-speed);
+        }
+
+        .search-overlay-close:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .search-overlay-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .search-overlay-input-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            align-items: stretch;
+        }
+
+        .search-overlay-input {
+            flex: 1 1 200px;
+            min-width: 0;
+            padding: 0.9rem 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            color: var(--text-main);
+        }
+
+        .search-overlay-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .search-overlay-submit {
+            padding: 0.9rem 1.35rem;
+            background: linear-gradient(135deg, #E08D00 0%, #F5A623 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-headings);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: filter var(--transition-speed);
+            white-space: nowrap;
+        }
+
+        .search-overlay-submit:hover {
+            filter: brightness(1.06);
+        }
+
+        .search-overlay-hint {
+            margin: 0;
+            font-size: 0.78rem;
+            color: var(--steel-grey);
+            line-height: 1.45;
         }
 
         .mobile-menu {
@@ -765,7 +949,7 @@
         .icon-brand-arrow {
             width: 22px; /* Standardized small scale for high-precision aesthetic */
             height: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
             vertical-align: middle;
             display: inline-flex;
             align-items: center;
@@ -773,6 +957,7 @@
         }
 
         /* Color States via CSS Filters */
+        .icon-brand-arrow.white,
         .white-arrow {
             filter: brightness(0) invert(1);
         }
@@ -788,6 +973,11 @@
         .btn-quote:hover .icon-brand-arrow,
         .read-more:hover .icon-brand-arrow {
             transform: translateX(10px);
+        }
+
+        .btn-add-cart:focus-visible {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: 2px;
         }
 
         .slider-btn:hover .icon-brand-arrow {
@@ -910,39 +1100,6 @@
             display: none; /* Removed in favor of overlays */
         }
 
-        .stock-badge, .condition-badge {
-            position: absolute;
-            top: 10px; /* Float away from top edge */
-            padding: 0.45rem 1rem; /* Reduced by ~15-20% for a cleaner footprint */
-            font-family: var(--font-headings);
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 0.6rem; /* Keep text as is */
-            letter-spacing: 0.5px;
-            z-index: 10;
-            border-radius: 2px;
-        }
-
-        .stock-badge {
-            left: 0;
-            background-color: var(--success-green);
-            color: white;
-        }
-
-        .badge-call {
-            background-color: #64748b;
-        }
-
-        .condition-badge {
-            right: 0;
-            background-color: var(--primary-blue);
-            color: white;
-        }
-
-        .cond-good {
-            background-color: #3b82f6;
-        }
-
         .product-card:hover {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transform: translateY(-5px);
@@ -1013,6 +1170,14 @@
             color: #475569;
         }
 
+        .product-card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            margin-top: auto;
+            width: 100%;
+        }
+
         .btn-quote {
             width: 100%;
             background: linear-gradient(135deg, #f5a623 0%, #ff8c00 100%);
@@ -1030,7 +1195,6 @@
             border: none;
             cursor: pointer;
             transition: all var(--transition-speed);
-            margin-top: auto;
         }
 
         .btn-quote .icon-arrow {
@@ -1041,6 +1205,44 @@
             filter: brightness(1.1);
             transform: translateY(-2px);
             box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            background: transparent;
+            color: var(--primary-blue);
+            padding: 0.85rem 1.5rem;
+            border-radius: 4px;
+            font-family: var(--font-headings);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+            transition: background var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .btn-add-cart:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(26, 58, 107, 0.2);
+        }
+
+        .btn-add-cart .icon-brand-arrow {
+            width: 20px;
+            flex-shrink: 0;
+            transition: transform var(--transition-speed), filter var(--transition-speed);
+        }
+
+        .btn-add-cart:hover .icon-brand-arrow {
+            filter: brightness(0) invert(1);
+            transform: translateX(10px);
         }
 
         /* Slider Interactions */
@@ -1222,30 +1424,6 @@
             background: var(--primary-blue);
         }
 
-        .btn-automation {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.85rem 1.75rem;
-            font-family: var(--font-headings);
-            font-size: 0.8rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--white);
-            background: #c81e1e;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: filter var(--transition-speed), transform var(--transition-speed);
-        }
-
-        .btn-automation:hover {
-            filter: brightness(1.08);
-            transform: translateY(-2px);
-            color: var(--white);
-        }
-
         .automation-promo-aside {
             display: flex;
             flex-direction: column;
@@ -1262,86 +1440,58 @@
             max-width: 100%;
         }
 
-        .automation-promo-video {
+        .automation-promo-embed {
             position: relative;
-            display: block;
-            aspect-ratio: 16 / 10;
+            aspect-ratio: 16 / 9;
             background: #111;
         }
 
-        .automation-promo-video img {
+        .automation-promo-youtube-launch {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            cursor: pointer;
+            background: #111;
+        }
+
+        .automation-promo-youtube-thumb {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
 
-        .automation-promo-play {
+        .automation-promo-youtube-playbtn {
             position: absolute;
             inset: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.25);
+            background: rgba(0, 0, 0, 0.28);
             transition: background var(--transition-speed);
         }
 
-        .automation-promo-video:hover .automation-promo-play {
-            background: rgba(0, 0, 0, 0.35);
+        .automation-promo-youtube-launch:hover .automation-promo-youtube-playbtn,
+        .automation-promo-youtube-launch:focus-visible .automation-promo-youtube-playbtn {
+            background: rgba(0, 0, 0, 0.45);
         }
 
-        .automation-promo-play svg {
-            width: 64px;
-            height: 64px;
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+        .automation-promo-youtube-launch:focus-visible {
+            outline: 2px solid var(--white);
+            outline-offset: 2px;
         }
 
-        .automation-promo-brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .automation-promo-brand-a {
-            font-family: var(--font-headings);
-            font-weight: 400;
-            font-size: 2.5rem;
-            line-height: 1;
-            color: #c81e1e;
-            letter-spacing: -0.5px;
-        }
-
-        .automation-promo-brand-text {
-            display: flex;
-            flex-direction: column;
-            gap: 0.15rem;
-        }
-
-        .automation-promo-brand-text strong {
-            font-family: var(--font-headings);
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--dark-bg);
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            border-bottom: 2px solid var(--dark-bg);
-            padding-bottom: 0.15rem;
-            display: inline-block;
-            width: fit-content;
-        }
-
-        .automation-promo-brand-sub {
-            font-family: var(--font-body);
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
-        .automation-promo-brand-sub span {
-            color: var(--dark-bg);
+        .automation-promo-youtube iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         @media (max-width: 1024px) {
@@ -1350,7 +1500,7 @@
             }
         }
 
-        /* OEM PARTNERS */
+        /* PARTNER BRANDS */
         .oems-section {
             background: #f8fafc;
             padding: 5rem 0;
@@ -1385,12 +1535,12 @@
             background: var(--white);
             border: 1px solid var(--border-light);
             border-radius: 8px;
-            padding: 1.25rem 0.9rem 1rem;
-            min-height: 160px;
+            padding: 1.25rem 0.9rem;
+            min-height: 120px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             text-align: center;
             transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
@@ -1439,7 +1589,7 @@
         }
 
         .oem-card-logo-img--johnford {
-            max-height: 65px;
+            max-height: 39px;
             max-width: 98%;
         }
 
@@ -1453,30 +1603,17 @@
         }
 
         .oem-card-logo-img--nexturn {
-            max-height: 87px;
+            max-height: 79px;
             max-width: 96%;
         }
 
         .oem-card-logo-img--ocean {
-            max-height: 73px;
+            max-height: 66px;
             max-width: 96%;
         }
 
         .oem-card-logo-img--precihole {
-            max-height: 57px;
-        }
-
-        .oem-card-caption {
-            width: 100%;
-            margin: 0;
-            margin-top: auto;
-            padding-top: 0.85rem;
-            border-top: 1px solid var(--border-light);
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            color: var(--steel-grey);
-            line-height: 1.45;
-            font-weight: 500;
+            max-height: 52px;
         }
 
         @media (max-width: 1200px) {
@@ -1491,7 +1628,7 @@
             }
 
             .oem-card {
-                min-height: 140px;
+                min-height: 110px;
             }
         }
 
@@ -1691,19 +1828,8 @@
         }
 
         .testimonial-author-box {
-            display: flex;
-            align-items: center;
-            gap: 0.96rem;
             border-top: 1px solid #f1f5f9;
             padding-top: 1.08rem;
-        }
-
-        .author-pfp {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #cbd5e1;
         }
 
         .author-details h4 {
@@ -1895,10 +2021,28 @@
 
         .contact-info li {
             display: flex;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 12px;
             margin-bottom: 1rem;
             color: var(--steel-grey);
             font-size: 0.95rem;
+        }
+
+        .contact-info-icon {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            margin-top: 0.2em;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
         }
 
         .footer-bottom {
@@ -1908,16 +2052,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.85rem;
+            font-size: calc(0.85rem - 2pt);
             color: var(--steel-grey);
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: inherit;
         }
 
         .footer-legal {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 0.75rem;
             align-items: center;
             justify-content: flex-end;
+        }
+
+        .footer-legal-sep {
+            opacity: 0.35;
+            color: var(--steel-grey);
+            user-select: none;
+            font-weight: 300;
         }
 
         .footer-legal a {
@@ -2054,13 +2210,20 @@
         <div class="top-bar">
             <div class="container">
                 <div class="center-msg">
-                    Enjoy 20+ Years of Industrial Expertise - Personally Inspected Inventory <strong id="cta-msg">JOIN
-                        NOW</strong>
+                    20+ Yrs Expertise · Inspected Inventory <strong id="cta-msg">JOIN NOW</strong>
                 </div>
                 <div class="right-links">
-                    <a href="#">Become a Dealer</a>
-                    <span style="opacity: 0.3; margin: 0 10px;">|</span>
-                    <a href="#contact" style="color: var(--accent-orange); font-weight: 700;">Request a Quote</a>
+                    <a href="tel:+15854710874" class="top-bar-contact-link">
+                        <svg class="top-bar-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>585-471-0874</span>
+                    </a>
+                    <span class="top-bar-sep" aria-hidden="true">|</span>
+                    <a href="mailto:info@usedcncequipmentman.com" class="top-bar-contact-link">
+                        <svg class="top-bar-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>info@usedcncequipmentman.com</span>
+                    </a>
+                    <span class="top-bar-sep" aria-hidden="true">|</span>
+                    <a href="#contact" class="top-bar-cta">Request a Quote</a>
                 </div>
             </div>
         </div>
@@ -2081,7 +2244,7 @@
                             <li role="none"><a href="#featured" role="menuitem">Vertical machining centers</a></li>
                             <li role="none"><a href="#featured" role="menuitem">Horizontal machining centers</a></li>
                             <li role="none"><a href="#featured" role="menuitem">Swiss lathes</a></li>
-                            <li role="none"><a href="#automation" role="menuitem">Automation</a></li>
+                            <li role="none"><a href="#our-brand" role="menuitem">Our Brand</a></li>
                             <li role="none"><a href="#featured" role="menuitem">Robotics</a></li>
                             <li role="none"><a href="#featured" role="menuitem">Bridge mills</a></li>
                             <li role="none"><a href="#featured" role="menuitem">Boring mills</a></li>
@@ -2126,9 +2289,9 @@
 
                     <!-- Icons -->
                     <div class="nav-icons">
-                        <button class="nav-icon-btn" title="Search">
+                        <button type="button" class="nav-icon-btn" id="site-search-open" title="Search" aria-label="Open search" aria-expanded="false" aria-controls="site-search-overlay" aria-haspopup="dialog">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
@@ -2166,7 +2329,7 @@
                             <li><a href="#featured">Vertical machining centers</a></li>
                             <li><a href="#featured">Horizontal machining centers</a></li>
                             <li><a href="#featured">Swiss lathes</a></li>
-                            <li><a href="#automation">Automation</a></li>
+                            <li><a href="#our-brand">Our Brand</a></li>
                             <li><a href="#featured">Robotics</a></li>
                             <li><a href="#featured">Bridge mills</a></li>
                             <li><a href="#featured">Boring mills</a></li>
@@ -2198,6 +2361,24 @@
             </ul>
         </div>
     </header>
+
+    <div id="site-search-overlay" class="search-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="site-search-heading">
+        <div class="search-overlay-inner">
+            <div class="search-overlay-head">
+                <h2 id="site-search-heading" class="search-overlay-title">Search equipment</h2>
+                <button type="button" class="search-overlay-close" id="site-search-close" aria-label="Close search" data-search-close>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <form class="search-overlay-form" id="site-search-form" action="#featured" method="get">
+                <label for="site-search-input" class="search-overlay-hint">Look up machines, brands, or categories. Submit goes to featured inventory.</label>
+                <div class="search-overlay-input-wrap">
+                    <input type="search" id="site-search-input" name="q" class="search-overlay-input" placeholder="e.g. Haas, VMC, lathe…" autocomplete="off" enterkeyhint="search">
+                    <button type="submit" class="search-overlay-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- 2. HERO BANNER -->
     <section class="hero">
@@ -2351,8 +2532,6 @@
                     <!-- Product Card 1 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <span class="stock-badge">In Stock</span>
-                            <span class="condition-badge cond-good">Good</span>
                             <img src="assets/what-is-cnc-machining.png" alt="Haas VF-2 CNC Vertical Machining Center">
                         </div>
                         <div class="product-details">
@@ -2362,15 +2541,16 @@
                                 <span class="spec-tag">Year: 2014</span>
                                 <span class="spec-tag">Condition: Fully Operational</span>
                             </div>
-                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                            <div class="product-card-actions">
+                                <button type="button" class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                                <button type="button" class="btn-add-cart" aria-label="Add Haas VF-2 to cart">Add to Cart <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Product Card 2 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <span class="stock-badge">In Stock</span>
-                            <span class="condition-badge">Excellent</span>
                             <img src="assets/3-Axis-CNC-machining3.jpg" alt="Bridgeport Series I Knee Mill">
                         </div>
                         <div class="product-details">
@@ -2380,15 +2560,16 @@
                                 <span class="spec-tag">Year: 2008</span>
                                 <span class="spec-tag">Recently Serviced</span>
                             </div>
-                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                            <div class="product-card-actions">
+                                <button type="button" class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                                <button type="button" class="btn-add-cart" aria-label="Add Bridgeport Series I Knee Mill to cart">Add to Cart <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Product Card 3 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <span class="stock-badge badge-call">Call for Availability</span>
-                            <span class="condition-badge cond-good">Good</span>
                             <img src="assets/cnc-machining.jpg" alt="Cincinnati #2 Surface Grinder">
                         </div>
                         <div class="product-details">
@@ -2398,15 +2579,16 @@
                                 <span class="spec-tag">Year: 2005</span>
                                 <span class="spec-tag">Tested & Running</span>
                             </div>
-                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                            <div class="product-card-actions">
+                                <button type="button" class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                                <button type="button" class="btn-add-cart" aria-label="Add Cincinnati #2 Surface Grinder to cart">Add to Cart <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Product Card 4 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <span class="stock-badge">In Stock</span>
-                            <span class="condition-badge">Excellent</span>
                             <img src="assets/metal-machine-tools-industry-cnc-turning.jpeg" alt="South Bend CNC Lathe">
                         </div>
                         <div class="product-details">
@@ -2416,7 +2598,10 @@
                                 <span class="spec-tag">Year: 2018</span>
                                 <span class="spec-tag">Low Hours</span>
                             </div>
-                            <button class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                            <div class="product-card-actions">
+                                <button type="button" class="btn-quote">Request a Quote <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></button>
+                                <button type="button" class="btn-add-cart" aria-label="Add South Bend 15 inch CNC Precision Lathe to cart">Add to Cart <img src="assets/CTAArrow.svg" class="icon-brand-arrow blue-arrow" alt=""></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2431,37 +2616,32 @@
         </div>
     </section>
 
-    <!-- CNC AUTOMATION PROMO -->
-    <section class="automation-promo" id="automation">
+    <!-- BRAND STORY -->
+    <section class="automation-promo" id="our-brand">
         <div class="container">
             <div class="automation-promo-grid">
                 <div class="automation-promo-copy">
-                    <h2 class="automation-promo-title">CNC Automation Solutions from our A+ Automation Team</h2>
-                    <p class="automation-promo-lead">The OB7 is a true independent <strong>7-axis collaborative robot</strong> that uses a “self-teaching” platform.</p>
+                    <h2 class="automation-promo-title">Used CNC Equipment Man—inspected machines, honest answers</h2>
+                    <p class="automation-promo-lead">We’re a <strong>U.S.-based team</strong> helping manufacturers and job shops source used CNC and metalworking equipment without the guesswork. Every relationship starts with straight answers, documented condition, and respect for how hard you work to keep spindles turning.</p>
                     <ul class="automation-promo-list">
-                        <li>Fill Employment &amp; Skills Gaps</li>
-                        <li>Machine Tending 24/7</li>
-                        <li>Simplify Your Workflow</li>
-                        <li>Overcome Business Interruptions</li>
-                        <li>Easy First-Step to Modernization</li>
-                        <li>Save Money &amp; Increase Your Bottom Line</li>
+                        <li>Hands-on inspection and clear photos—so you know what you’re buying</li>
+                        <li>No-pressure guidance from people who speak machines, not scripts</li>
+                        <li>OEM-backed lines and factory relationships when support matters</li>
+                        <li>Nationwide reach with a home base in Rochester, New York</li>
+                        <li>Focused on industrial-grade iron—VMCs, lathes, grinders, EDMs, and more</li>
+                        <li>Here for the long haul: quotes, logistics questions, and post-sale follow-through</li>
                     </ul>
-                    <a href="#" class="btn-automation">View More</a>
+                    <a href="#about" class="btn btn-primary">View More <img src="assets/CTAArrow.svg" class="icon-brand-arrow white" alt=""></a>
                 </div>
                 <div class="automation-promo-aside">
                     <div class="automation-promo-video-wrap">
-                        <a href="https://www.youtube.com/results?search_query=OB7+collaborative+robot" class="automation-promo-video" target="_blank" rel="noopener noreferrer" aria-label="Watch automation team video on YouTube">
-                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9dd7d?q=80&w=900&auto=format&fit=crop" alt="Machine shop video thumbnail">
-                            <span class="automation-promo-play" aria-hidden="true">
-                                <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path fill="#f00" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path fill="#fff" d="M45 24 27 14v20"/></svg>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="automation-promo-brand">
-                        <span class="automation-promo-brand-a">A+</span>
-                        <div class="automation-promo-brand-text">
-                            <strong>Automation</strong>
-                            <span class="automation-promo-brand-sub"><span>by </span>Absolute Machine Tools</span>
+                        <div class="automation-promo-embed automation-promo-youtube" id="brand-youtube-root" data-yt-id="lEyNWtM6MW4">
+                            <button type="button" class="automation-promo-youtube-launch" id="brand-youtube-btn" aria-label="Play video: CNC machining — what is it and how does it work?">
+                                <img class="automation-promo-youtube-thumb" src="https://i.ytimg.com/vi/lEyNWtM6MW4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+                                <span class="automation-promo-youtube-playbtn" aria-hidden="true">
+                                    <svg viewBox="0 0 68 48" width="68" height="48" focusable="false"><path fill="#f00" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"></path><path fill="#fff" d="M45 24 27 14v20"></path></svg>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -2470,10 +2650,10 @@
     </section>
 
     <!-- 5. WHY BUY FROM US (TRUST STRIP) -->
-    <section class="why-us">
+    <section class="why-us" id="about">
         <div class="container">
             <div class="section-header text-center">
-                <h2>Why Industrial Buyers Choose Used CNC Equipment Man</h2>
+                <h2>Why Industrial Buyers Choose<br>Used CNC Equipment Man</h2>
             </div>
             <div class="trust-grid">
                 <div class="trust-card">
@@ -2560,11 +2740,11 @@
         </div>
     </section>
 
-    <!-- OEM PARTNERS -->
+    <!-- PARTNER BRANDS -->
     <section class="oems-section" id="oems">
         <div class="container text-center">
             <div class="section-header">
-                <h2>Our OEM partners</h2>
+                <h2>Our partners</h2>
                 <p>These are the manufacturers and brands we stand behind—trusted names in CNC, automation, and metalworking. When you work with us, you get serious equipment backed by factory relationships and real application support.</p>
             </div>
             <div class="oem-grid">
@@ -2572,61 +2752,51 @@
                     <div class="oem-card-logo">
                         <img src="assets/oem/accutex.png" alt="AccuteX" class="oem-card-logo-img oem-card-logo-img--accutex" width="200" height="40" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Wired EDMs &amp; Die Sinkers</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/trpec.svg" alt="TRPEC" class="oem-card-logo-img oem-card-logo-img--trpec" width="180" height="32" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">5-Axis Machining Centers</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/enshu.svg" alt="Enshu" class="oem-card-logo-img oem-card-logo-img--enshu" width="180" height="32" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Horizontal CNC Machining</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/fanuc.svg" alt="FANUC" class="oem-card-logo-img oem-card-logo-img--fanuc" width="160" height="28" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Certified Robotic Automation Integrator</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/johnford.png" alt="Johnford" class="oem-card-logo-img oem-card-logo-img--johnford" width="180" height="48" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Bridge Mills, Boring Mills, &amp; Large Lathes</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/lico.svg" alt="LICO" class="oem-card-logo-img oem-card-logo-img--lico" width="160" height="32" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Multi-Slide CNC Screw Machines</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/mitsubishi-electric.svg" alt="Mitsubishi Electric" class="oem-card-logo-img oem-card-logo-img--mitsubishi" width="200" height="48" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Automation and Robotics</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/nexturn.svg" alt="Nexturn" class="oem-card-logo-img oem-card-logo-img--nexturn" width="200" height="36" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Swiss CNC Lathes</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/ocean.svg" alt="Ocean Technologies" class="oem-card-logo-img oem-card-logo-img--ocean" width="220" height="36" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Small Hole Drilling Equipment</p>
                 </div>
                 <div class="oem-card">
                     <div class="oem-card-logo">
                         <img src="assets/oem/precihole.svg" alt="Precihole" class="oem-card-logo-img oem-card-logo-img--precihole" width="180" height="32" loading="lazy">
                     </div>
-                    <p class="oem-card-caption">Horizontals &amp; High Automation</p>
                 </div>
             </div>
         </div>
@@ -2677,7 +2847,6 @@
                         <span class="testimonial-title">"So Far So Good"</span>
                         <span class="testimonial-quote">"I just went on here and see the product that I wanted and I bought it so far so good. The Haas arrived exactly as described."</span>
                         <div class="testimonial-author-box">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Ronald M">
                             <div class="author-details">
                                 <h4>Ronald M</h4>
                                 <span>Ohio, US</span>
@@ -2691,7 +2860,6 @@
                         <span class="testimonial-title">"Great Price"</span>
                         <span class="testimonial-quote">"Great price, I know it is used, but look at what a new one cost!! THANK YOU Used CNC Man. Saved us nearly $45k on our VMC."</span>
                         <div class="testimonial-author-box">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Graham">
                             <div class="author-details">
                                 <h4>Graham Griffiths</h4>
                                 <span>Tennessee, US</span>
@@ -2705,7 +2873,6 @@
                         <span class="testimonial-title">"Good Reputation"</span>
                         <span class="testimonial-quote">"Honestly this was the cheapest place I could find the machine I needed. Checkout was easy and the reputation is solid."</span>
                         <div class="testimonial-author-box">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Ashton">
                             <div class="author-details">
                                 <h4>Ashton A</h4>
                                 <span>California, US</span>
@@ -2719,7 +2886,6 @@
                         <span class="testimonial-title">"Fast Ship"</span>
                         <span class="testimonial-quote">"Have done business with John before! Always a pleasure, fast ship and great deals on rigging for the press brakes."</span>
                         <div class="testimonial-author-box">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Eli C">
                             <div class="author-details">
                                 <h4>Eli C</h4>
                                 <span>Michigan, US</span>
@@ -2733,7 +2899,6 @@
                         <span class="testimonial-title">"Best Condition"</span>
                         <span class="testimonial-quote">"My milling center got here super fast and in the best condition possible for a used like new machine. Highly recommend."</span>
                         <div class="testimonial-author-box">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="author-pfp" alt="Patrick J">
                             <div class="author-details">
                                 <h4>Patrick J</h4>
                                 <span>Tennessee, US</span>
@@ -2845,10 +3010,22 @@
             <div class="footer-col">
                 <h4>Contact Us</h4>
                 <ul class="contact-info">
-                    <li>📞 (555) 000-0000</li>
-                    <li>✉️ info@usedcncequipmentman.com</li>
-                    <li>📍 United States</li>
-                    <li>Mon–Fri: 8:00 AM – 5:00 PM EST</li>
+                    <li>
+                        <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+15854710874">585-471-0874</a>
+                    </li>
+                    <li>
+                        <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:info@usedcncequipmentman.com">info@usedcncequipmentman.com</a>
+                    </li>
+                    <li>
+                        <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>132 Stony Point Road, Rochester, NY 14624, USA</span>
+                    </li>
+                    <li>
+                        <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span>Mon–Fri: 8:00 AM – 5:00 PM EST</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -2856,7 +3033,9 @@
             <p>© 2026 Used CNC Equipment Man LLC. All Rights Reserved.</p>
             <div class="footer-legal">
                 <a href="#">Privacy Policy</a>
+                <span class="footer-legal-sep" aria-hidden="true">|</span>
                 <a href="#">Terms & Conditions</a>
+                <span class="footer-legal-sep" aria-hidden="true">|</span>
                 <a href="https://www.commercepundit.com" target="_blank" rel="noopener noreferrer">Design and Developed by CommercePundit</a>
             </div>
         </div>
@@ -2923,6 +3102,113 @@
         document.querySelectorAll('[data-testimonial-track]').forEach((track) => {
             track.innerHTML += track.innerHTML;
         });
+
+        // Site search overlay
+        (function () {
+            var openBtn = document.getElementById('site-search-open');
+            var overlay = document.getElementById('site-search-overlay');
+            var input = document.getElementById('site-search-input');
+            var form = document.getElementById('site-search-form');
+            var inner = overlay ? overlay.querySelector('.search-overlay-inner') : null;
+            if (!openBtn || !overlay) return;
+
+            function openSearch() {
+                overlay.classList.add('is-open');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('search-modal-open');
+                openBtn.setAttribute('aria-expanded', 'true');
+                if (input) {
+                    setTimeout(function () {
+                        input.focus();
+                        input.select();
+                    }, 30);
+                }
+            }
+
+            function closeSearch() {
+                overlay.classList.remove('is-open');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('search-modal-open');
+                openBtn.setAttribute('aria-expanded', 'false');
+                openBtn.focus();
+            }
+
+            openBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (overlay.classList.contains('is-open')) {
+                    closeSearch();
+                } else {
+                    openSearch();
+                }
+            });
+
+            overlay.addEventListener('click', function () {
+                closeSearch();
+            });
+
+            if (inner) {
+                inner.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+
+            document.querySelectorAll('[data-search-close]').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    closeSearch();
+                });
+            });
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    closeSearch();
+                    var featured = document.getElementById('featured');
+                    if (featured) {
+                        window.scrollTo({
+                            top: featured.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+                    closeSearch();
+                }
+            });
+        })();
+
+        // Brand section: YouTube on click — nocookie embed + referrerpolicy + origin (mitigates Error 153 per YouTube / referrer docs).
+        (function () {
+            var root = document.getElementById('brand-youtube-root');
+            var btn = document.getElementById('brand-youtube-btn');
+            if (!root || !btn) return;
+            var id = root.getAttribute('data-yt-id') || 'lEyNWtM6MW4';
+            var iframeTitle = 'CNC machining - What is it and How Does it Work? (Must Know Basics)';
+            btn.addEventListener('click', function () {
+                if (btn.getAttribute('data-yt-loaded') === '1') return;
+                btn.setAttribute('data-yt-loaded', '1');
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute('title', iframeTitle);
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+                var u = new URL('https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id));
+                u.searchParams.set('autoplay', '1');
+                u.searchParams.set('rel', '0');
+                u.searchParams.set('modestbranding', '1');
+                u.searchParams.set('playsinline', '1');
+                if (location.protocol === 'http:' || location.protocol === 'https:') {
+                    u.searchParams.set('origin', location.origin);
+                }
+                iframe.src = u.toString();
+                root.appendChild(iframe);
+                btn.setAttribute('hidden', '');
+                btn.style.display = 'none';
+            });
+        })();
     </script>
 </body>
 
